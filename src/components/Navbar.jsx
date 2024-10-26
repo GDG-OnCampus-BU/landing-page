@@ -42,17 +42,19 @@ export default function Navbar() {
               height={32}
             />
 
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              GDG Bennett University
-            </span>
+        <span className="self-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 whitespace-nowrap dark:text-white shadow-lg">
+          GDG Bennett University
+        </span>
+
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              className="text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover: dark:focus:ring-blue-800"
-            >
-              Get started
-            </button>
+          <button
+            type="button"
+            className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full text-sm px-6 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 hover:from-blue-600 hover:to-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 shadow-lg shadow-blue-500/30 dark:shadow-blue-800/40"
+          >
+            Get Started
+          </button>
+
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -70,9 +72,9 @@ export default function Navbar() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>

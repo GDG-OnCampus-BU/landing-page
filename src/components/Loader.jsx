@@ -10,8 +10,8 @@ export default function Loader() {
           <Image
             src={public_path+"/assets/logo_gdg.png"}
             alt="GDG Logo"
-            width={40}
-            height={20}
+            width={80}
+            height={40}
           />
         </div>
       </div>
