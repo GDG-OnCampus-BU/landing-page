@@ -100,7 +100,7 @@ export default function Home() {
               </p>
               <p className="mt-4">
                 Follow us on social media to stay updated with our latest events and
-                announcements.
+                announcements
               </p>
             </>
           ),
