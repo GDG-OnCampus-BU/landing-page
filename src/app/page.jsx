@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import EventsSection from "@/components/EventsSection";
 import Links from "@/components/Links";
+import About from "@/components/About";
+import Services from "@/components/Services";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH ;
@@ -27,13 +29,40 @@ export default function Home() {
           top: -1,
           behavior: "smooth",
         });
-      }, 600);
+      }, 800);
     }
   };
 
+  //scroll for about
+  const scrollToABout = () => {
+      const section = document.getElementById("aboutsection");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollBy({
+          top: -1,
+          behavior: "smooth",
+        });
+      }, 800);
+      }
+  }
+  //scroll for services
+  const scrollToServices = () => {
+    const section = document.getElementById("servicessection");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      window.scrollBy({
+        top: -1,
+        behavior: "smooth",
+      });
+    }, 800);
+    }
+}
+
   return (
     <>
-      <Navbar />
+      <Navbar scrollToABout={scrollToABout} scrollToServices={scrollToServices}/>
       <div
       id="fixed-image"
       className="fixed top-[-10] left-0 w-full h-full z-[-1] bg-cover bg-center opacity-40"
@@ -75,6 +104,16 @@ export default function Home() {
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-50 text-center"
       >
         <EventsSection events={eventsData} />
+      </div>
+
+      {/* About Section */}
+      <div id="aboutsection" className="flex flex-col items-center justify-center min-h-screen p-4 pb-10 gap-8 sm:p-100 text-center">
+        <About/>
+      </div>
+
+      {/* About Section */}
+      <div id="servicessection" className="flex flex-col items-center justify-center p-4 pb-10 gap-8 sm:p-100 text-center">
+        <Services/>
       </div>
 
       {/* Links Section */}

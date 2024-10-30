@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 2000); // Simulated loading delay
+    const timeout = setTimeout(() => setIsLoading(false), 3000); // Simulated loading delay
     return () => clearTimeout(timeout);
   }, []);
 

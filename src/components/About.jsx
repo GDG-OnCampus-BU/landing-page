@@ -1,26 +1,5 @@
-"use client";
-
-import Navbar from "@/components/Navbar";
-import { useEffect } from "react";
-
-export default function Home() {
-    const scrollToSection = () => {
-        const section = document.getElementById("more-section");
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-          setTimeout(() => {
-            window.scrollBy({
-              top: -65,
-              behavior: "smooth",
-            });
-          }, 800);
-        }
-      };
-    useEffect(()=>{
-        setTimeout(()=>{
-            scrollToSection();
-        },1700)
-    },[])
+export default function About() {
+    
     const Section = ({ title, content }) => (
         <section className="more-section mb-12 rounded-lg overflow-hidden" style={{marginLeft:'50px',marginRight:'50px'}}>
           <div
@@ -70,10 +49,6 @@ export default function Home() {
           content: (
             <ul className="list-disc list-inside space-y-2">
               <li>
-                <strong>Workshops & Hackathons:</strong> Hands-on coding workshops,
-                hackathons, and coding challenges.
-              </li>
-              <li>
                 <strong>Guest Speaker Sessions:</strong> Talks from professionals in
                 tech, including Google engineers and developers.
               </li>
@@ -108,21 +83,11 @@ export default function Home() {
       ];
   return (
     <>
-    <Navbar />
-      <div
-      id="fixed-image"
-      className="fixed top-[-10] left-0 w-full h-full z-[-1] bg-cover bg-center opacity-40"
-      style={{
-        backgroundImage: "url('https://gdg-oncampus-bu.github.io/landing-page/assets/image1.png')",
-        backgroundRepeat:"none",
-        backgroundSize:"cover",
-      }}
-    ></div>
 
     <main>
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center">
+    <div className="flex flex-col items-center justify-center text-center bg-black py-12 w-full mb-8" style={{borderRadius:"20px"}}>
         <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-wide shadow-lg bg-gradient-to-r bg-white bg-clip-text text-transparent">
-          <button onClick={scrollToSection}>About GDG-BU</button>
+          <button>About GDG-BU</button>
         </h1>
     </div>
 

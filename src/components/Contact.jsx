@@ -1,6 +1,3 @@
-"use client";
-
-import Navbar from "@/components/Navbar";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -24,20 +21,9 @@ export default function Home() {
   
   return (
     <>
-    {/* Meta Tags for SEO */}
-    <Navbar />
-      <div
-      id="fixed-image"
-      className="fixed top-[-10] left-0 w-full h-full z-[-1] bg-cover bg-center opacity-40"
-      style={{
-        backgroundImage: "url('https://gdg-oncampus-bu.github.io/landing-page/assets/image1.png')",
-        backgroundRepeat:"none",
-        backgroundSize:"cover",
-      }}
-    ></div>
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-wide shadow-lg bg-gradient-to-r bg-white bg-clip-text text-transparent">
-          Services GDG-BU
+          Contact GDG-BU
         </h1>
     </div>
     <main>
