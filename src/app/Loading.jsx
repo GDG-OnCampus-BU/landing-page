@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function LoadingScreen() {
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH ;
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export default function LoadingScreen() {
     <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
       <div className="animate-spin">
         <Image
-          src="/assets/logo_gdg.png"
+          src={publicPath+"/assets/logo_gdg.png"}
           alt="GDG Logo"
           width={50}
           height={25}
