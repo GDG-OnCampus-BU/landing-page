@@ -33,6 +33,20 @@ export default function Home() {
     }
   };
 
+  const scrollToHome = () => {
+    const section = document.getElementById("homesection");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        window.scrollBy({
+          top: -1,
+          behavior: "smooth",
+        });
+      }, 800);
+    }
+  };
+
+
   //scroll for about
   const scrollToABout = () => {
       const section = document.getElementById("aboutsection");
@@ -62,7 +76,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar scrollToABout={scrollToABout} scrollToServices={scrollToServices}/>
+      <Navbar scrollToABout={scrollToABout} scrollToServices={scrollToServices} scrollToHome={scrollToHome}/>
       <div
       id="fixed-image"
       className="fixed top-[-10] left-0 w-full h-full z-[-1] bg-cover bg-center opacity-40"
@@ -74,6 +88,7 @@ export default function Home() {
     ></div>
 
       <div
+        id="homesection"
         className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 text-center"
       >
         <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-wide shadow-lg bg-gradient-to-r bg-white bg-clip-text text-transparent">
@@ -111,7 +126,7 @@ export default function Home() {
         <About/>
       </div>
 
-      {/* About Section */}
+      {/* Services Section */}
       <div id="servicessection" className="flex flex-col items-center justify-center p-4 pb-10 gap-8 sm:p-100 text-center">
         <Services/>
       </div>
