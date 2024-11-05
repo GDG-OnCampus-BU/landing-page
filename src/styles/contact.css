@@ -1,0 +1,43 @@
+#contact .contact-form{
+    background: var(--bg-accent);
+    padding: 40px;
+    border-radius: 10px;
+}
+#contact .title{
+    font-size: 40px;
+}
+#contact .row{
+    justify-content: space-between;
+    gap: 20px;
+}
+#contact .control{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background: var(--bg-muted);
+    border-radius: 10px;
+    color: var(--foreground);
+    font-size: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+    border:solid 2px var(--border-primary);
+    resize: none;
+}
+input{
+    height: 50px;
+}
+#contact .control:focus{
+    border-color: var(--primary);
+    background: var(--bg-secondary);
+}
+#contact .bottom{
+    margin-top: 40px;
+}
+
+#contact .btn{
+    display: block;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 300px;
+}

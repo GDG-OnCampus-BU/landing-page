@@ -1,125 +1,75 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { HiMenu } from "react-icons/hi";
+import Logo from "./Logo";
+import SocialHandles from "@/Commons/SocialHandles";
+import { tabs } from "@/sources";
+import '../styles/navbar.css';
 
-export default function Navbar() {
-  const public_path = process.env.NEXT_PUBLIC_PUBLIC_PATH
-  const [visible, setVisible] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+const Navbar = () => {
+  const [openSidebar, setOpenSidebar] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-
-      if (currentScrollPos > scrollPosition) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-
-      setScrollPosition(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPosition]);
   return (
-    <>
-      <nav
-        className={`fixed w-full z-20 top-0 start-0  transition-all duration-300 ease-in-out ${visible ? "transform translate-y-0" : "transform -translate-y-full"}`}
-      >
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href=""
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image
-              src={public_path + "/assets/logo_gdg.png"}
-              alt="GDG Logo"
-              width={32}
-              height={32}
-            />
+    <nav className="navbar flex items-stretch justify-between bg-secondary border-b border-border-primary sticky top-0 z-50 px-5 py-2">
+      {/* Overlay */}
+      {openSidebar && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={() => setOpenSidebar(false)}
+        />
+      )}
 
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              GDG Bennett University
-            </span>
-          </a>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
-              type="button"
-              className="text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover: dark:focus:ring-blue-800"
-            >
-              Get started
-            </button>
-            <button
-              data-collapse-toggle="navbar-sticky"
-              type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-sticky"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
+      {/* Logo */}
+      <Logo />
+
+      {/* Navigation Tabs */}
+      <div
+        className={`tabs-group flex items-center space-x-4 ${openSidebar ? "sidebar fixed top-0 left-0 h-full w-80 bg-secondary flex-col justify-start items-center p-5 transform translate-x-0 transition-all duration-300 z-50" : "hidden md:flex"}`}
+      >
+        {tabs.map((tab, index) => (
+          <ScrollLink
+            key={index}
+            to={tab.id}
+            smooth={true}
+            offset={-70}
+            spy={true}
+            className="tab px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground cursor-pointer transition-all"
+            activeClass="bg-accent border border-border-primary"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+            {tab.name}
+          </ScrollLink>
+        ))}
+      </div>
+
+      {/* Social Handles */}
+      <SocialHandles className="hidden md:flex" />
+
+      {/* Action Buttons */}
+      <div className="buttons flex items-center space-x-5">
+        <ScrollLink
+          to="services"
+          smooth={true}
+          className="services-btn hidden lg:inline-block px-4 py-2 btn btn-secondary"
+        >
+          Services
+        </ScrollLink>
+        <ScrollLink
+          to="contact"
+          smooth={true}
+          className="btn primary contact-btn px-4 py-2 "
+        >
+          Contact Us
+        </ScrollLink>
+        {/* Sidebar Toggle Button */}
+        <div
+          className="menu-btn md:hidden flex items-center cursor-pointer text-2xl"
+          onClick={() => setOpenSidebar(!openSidebar)}
+        >
+          <HiMenu />
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;
