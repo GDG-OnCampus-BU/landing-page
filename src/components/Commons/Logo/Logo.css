@@ -1,0 +1,13 @@
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.logo .icon{
+    font-size: 40px;
+    color: var(--primary-accent);
+}
+.logo .icon img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
