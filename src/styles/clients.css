@@ -1,0 +1,64 @@
+#clients .clients-container{
+    margin-top: 20px;
+    overflow: hidden;
+    
+}
+#clients .slick-track{
+    display: flex !important;
+    overflow: hidden;
+}
+#clients .slick-slide{
+    height: inherit !important;
+    background: var(--bg-accent);
+    padding: 40px 30px;
+    border-radius: 10px;
+    border: solid .5px var(--border-primary);
+    display:flex;
+    align-items: stretch;
+    flex-direction: column;
+    transition: var(--transition);
+    max-width: 1150px
+}
+#clients .slick-slide:hover{
+    background: var(--bg-muted);
+}
+#clients .slick-slide>div{
+    flex:1;
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#clients .profile{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition);
+}
+#clients .profile:hover{
+    opacity: .5;
+}
+#clients .content{
+    flex: 1;
+    padding: 20px 0;
+}
+#clients .stars-conatainer{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--warning);
+}
+#clients .buttons-conatainer{
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+#clients .buttons-conatainer .btn{
+    background: var(--bg-primary);
+}
+#clients .buttons-conatainer .btn:hover{
+    background: var(--gradient);
+    border-color: none;
+}

@@ -1,0 +1,56 @@
+#properties .properties-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+#properties .property{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--bg-secondary);
+}
+
+#properties .property .picture{
+    height: 250px;
+    overflow: hidden;
+}
+#properties .property .picture img{
+    transition: var(--transition);
+}
+#properties .property:hover img{
+    transform: scale(1.2);
+}
+#properties .property .middle{
+    flex: 1;
+    padding: 20px;
+}
+#properties .property .middle row{
+    justify-content: space-between;
+}
+#properties .property .title{
+    font-size: 14px;
+}
+#properties .property .description{
+    margin: 10px;
+}
+#properties .property .bottom{
+    background: var(--bg-accent);
+    padding: 20px;
+}
+#properties .property .bottom .row{
+    margin-bottom: 15px;
+}
+
+/* Make responsive code*/
+@media (max-width:1000px){
+    #properties .properties-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:700px){
+    #properties .properties-container{
+        grid-template-columns: 100%;
+    }
+}

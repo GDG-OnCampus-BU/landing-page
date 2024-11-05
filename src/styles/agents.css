@@ -1,0 +1,35 @@
+#agents .slick-slide{
+    padding: 20px;
+}
+#agents .profile{
+    width: 8rem;
+    height: 8rem;
+    margin:auto;
+    border-radius: 100px;
+    overflow: hidden;
+}
+#agents .profile img{
+    transition: var(--transition);
+}
+#agents .slick-slide:hover img{
+    transform: scale(1.2);
+}
+#agents .name{
+    text-align: center;
+    margin: 10px 0;
+}
+#agents .agent-container{
+    margin-top: 40px;
+}
+#agents .buttons-container{
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+#agents .buttons-container .btn{
+    background: var(--bg-primary);
+}
+#agents .buttons-container .btn:hover{
+    background: var(--gradient);
+    border-color: none !important;
+}

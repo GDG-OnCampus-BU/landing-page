@@ -229,7 +229,7 @@ export const clients = [
 export const contactOptions = [
   {
     title:"Email",
-    value:"devanshijaiswal7@gmail.com",
+    value:"gdg.community.dev",
     icon:<MdOutlineAlternateEmail />,
   },
   {

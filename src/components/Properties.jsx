@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { properties } from '../sources';
 import { FaBath, FaBed } from 'react-icons/fa6';
 import Image from 'next/image';
+import '../styles/properties.css';
 
 const Properties = () => {
     const [itemsToShow, setItemsToShow] = useState(3);

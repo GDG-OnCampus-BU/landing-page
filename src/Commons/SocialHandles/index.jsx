@@ -1,5 +1,6 @@
 import React from 'react'
 import './SocialHandles.css';
+import { FaInstagram, FaXTwitter, FaYoutube,FaLinkedin} from "react-icons/fa6";
 
 const SocialHandles = () => {
   return (

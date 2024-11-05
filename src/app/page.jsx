@@ -9,6 +9,8 @@ import Agents from "@/components/Agents";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import '../styles/index.css';
+import About from "@/components/About";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH ;
@@ -29,6 +31,7 @@ export default function Home() {
     <>
       <Navbar/>
       <Hero/>
+      <About/>
       <Services/>
       <Properties/>
       <Agents/>
