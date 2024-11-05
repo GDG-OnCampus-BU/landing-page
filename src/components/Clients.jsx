@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import { FaStar } from 'react-icons/fa';
+import { clients } from '@/sources';
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
 
 const Clients = () => {
@@ -16,52 +17,6 @@ const Clients = () => {
     autoplaySpeed: 3000,
     centerPadding: '0',
   };
-
-
-
-
-  const clients = [
-    {
-      image:"client1",
-      name:'Kushagra Nigam',
-      review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-             veniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud 
-             exercitation ullamco laboris`
-    },
-    {
-      image:"client2",
-      name:'Kavya Mathur',
-      review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
-    },
-    {
-      image:"client3",
-      name:'Ritesh Sanon',
-      review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-             veniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud 
-             exercitation ullamco laborisveniam, quis nostrud exercitation ullamco laboris`
-    },
-    {
-      image:"client4",
-      name:'Arnav Mishra',
-      review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
-    },
-    {
-      image:"client5",
-      name:'Jaishree Malhotra',
-      review:` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
-    },
-  
-  ];
 
 
 

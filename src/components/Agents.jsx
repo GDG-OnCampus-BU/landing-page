@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
-import { agents } from '../../sources'
+import { agents } from '@/sources'
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
 
 const Agents = () => {

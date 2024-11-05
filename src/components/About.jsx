@@ -1,102 +1,41 @@
-export default function About() {
-    
-    const Section = ({ title, content }) => (
-        <section className="more-section mb-12 rounded-lg overflow-hidden" style={{marginLeft:'50px',marginRight:'50px'}}>
-          <div
-            className="page-content p-8 md:p-16 bg-gray-800 text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-700 hover:shadow-2xl"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 border-b-2 border-blue-400 pb-2">
-              {title}
-            </h2>
-            <div className="text-lg leading-relaxed">{content}</div>
-          </div>
-        </section>
-      );
+import React from 'react'
+// import aboutImage from './src/assets/about-image.jpeg'
+import { whyChooseUs } from '../../sources'
 
-      const sectionsData = [
-        {
-          title: "Who We Are",
-          content: (
-            <p>
-              Google Developer Group BU (GDG-BU) is a community of students,
-              developers, and tech enthusiasts at Boston University, all with a
-              passion for learning, building, and sharing. We connect individuals
-              interested in Google's developer technology, providing a platform for
-              networking, learning, and collaboration.
-            </p>
-          ),
-        },
-        {
-          title: "Our Mission",
-          content: (
-            <>
-              <p>
-                Our mission at GDG BU is to empower our members to grow as developers,
-                to foster a spirit of innovation and problem-solving, and to provide a
-                collaborative environment that promotes learning and mentorship.
-              </p>
-              <p className="mt-4">
-                Through hands-on workshops, talks by industry experts, and
-                project-based learning, we aim to bridge the gap between academic
-                knowledge and industry skills, preparing members for successful
-                careers in technology.
-              </p>
-            </>
-          ),
-        },
-        {
-          title: "What We Do",
-          content: (
-            <ul className="list-disc list-inside space-y-2">
-              <li>
-                <strong>Guest Speaker Sessions:</strong> Talks from professionals in
-                tech, including Google engineers and developers.
-              </li>
-              <li>
-                <strong>Networking Opportunities:</strong> Events that connect
-                students and professionals, helping build a strong tech network.
-              </li>
-              <li>
-                <strong>Mentorship Programs:</strong> Pairing members with mentors who
-                guide them in their tech journey.
-              </li>
-            </ul>
-          ),
-        },
-        {
-          title: "Join GDG BU",
-          content: (
-            <>
-              <p>
-                Interested in becoming part of GDG BU? Whether you're new to tech or a
-                seasoned developer, our community welcomes you! Join us to learn,
-                connect, and grow in a supportive environment. Check out our upcoming
-                events, and feel free to reach out to us with any questions.
-              </p>
-              <p className="mt-4">
-                Follow us on social media to stay updated with our latest events and
-                announcements
-              </p>
-            </>
-          ),
-        },
-      ];
+const About = () => {
   return (
-    <>
-
-    <main>
-    <div className="flex flex-col items-center justify-center text-center bg-black py-12 w-full mb-8" style={{borderRadius:"20px"}}>
-        <h1 className="text-4xl sm:text-5xl font-bold text-white tracking-wide shadow-lg bg-gradient-to-r bg-white bg-clip-text text-transparent">
-          <button>About GDG-BU</button>
-        </h1>
-    </div>
-
-    <div id="more-section">
-        {sectionsData.map((section, index) => (
-        <Section key={index} title={section.title} content={section.content} />
-        ))}
-    </div>
-    </main>
-  </>
-  );
+    <section id='about' className="py-12">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className='relative'>
+          <div className='overflow-hidden rounded-[50px] relative z-10'>
+            {/* Uncomment the image when available */}
+            {/* <img src={aboutImage} alt="" className="transition-transform duration-300" /> */}
+          </div>
+          <div className='absolute bottom-0 left-0 w-full h-[70%] z-20 bg-gradient-to-b from-transparent to-[#your-bg-primary-color] transition-all duration-300' />
+        </div>
+        <div className='flex flex-col'>
+          <h1 className="text-4xl font-semibold">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">About us</span>
+          </h1>
+          <p className='text-gray-700 mt-4'>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio vero deleniti eum voluptate. Cumque tempora ipsam consequatur iusto voluptate quod. Provident, in et? Ipsam, quidem expedita repellendus doloribus et odio? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti numquam iure dolore! Aperiam voluptas at enim quisquam. Totam accusantium iusto temporibus eius maiores rem ullam similique quae incidunt? Fugiat, repellat!
+          </p>
+          <div className="grid grid-cols-2 gap-8 mt-10 bg-[#your-bg-accent-color] rounded-lg border border-[#your-border-color] p-8">
+            {
+              whyChooseUs.map((list, index) => (
+                <div className='flex items-center bg-[#your-bg-secondary-color] p-6 rounded-lg border border-[#your-border-color] transition-transform duration-300 hover:bg-[#your-bg-muted-color] hover:scale-105' key={index}>
+                  <div className="flex items-center justify-center w-10 h-10 mr-4">
+                    {list.icon}
+                  </div>
+                  <h4 className='text-lg font-medium'>{list.title}</h4>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
+
+export default About
