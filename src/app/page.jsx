@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 import Hero from "@/components/Hero";
-import Properties from "@/components/Properties";
+import Events from "@/components/Events";
 import Agents from "@/components/Agents";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
@@ -33,7 +33,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <Services/>
-      <Properties/>
+      <Events/>
       <Agents/>
       <Clients/>
       <Contact/>
