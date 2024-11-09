@@ -25,7 +25,19 @@
 #services .service .buttons-wrapper .btn{
     background: var(--bg-primary);
 }
-
+.service:hover{
+    animation: fadeIn 1.2s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
 @media (max-width:1000px){
     #services .services-container{
         grid-template-columns: repeat(2,1fr);

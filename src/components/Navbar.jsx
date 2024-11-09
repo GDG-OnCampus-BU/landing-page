@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { HiMenu } from "react-icons/hi";
 import Logo from "./Logo";
 import SocialHandles from "@/Commons/SocialHandles";
-import { tabs } from "@/sources";
-import '../styles/navbar.css';
+import "../styles/navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ tabs }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
-    <nav className="navbar flex items-stretch justify-between bg-secondary border-b border-border-primary sticky top-0 z-50 px-5 py-2">
+    <div className="google-dynamic-border">
+    <nav className="navbar flex items-center justify-between bg-secondary border-b border-border-primary sticky top-0 z-50 px-5 py-3 shadow-md">
       {/* Overlay */}
       {openSidebar && (
         <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-40 z-40 transition-opacity duration-300"
           onClick={() => setOpenSidebar(false)}
         />
       )}
@@ -24,7 +23,7 @@ const Navbar = () => {
 
       {/* Navigation Tabs */}
       <div
-        className={`tabs-group flex items-center space-x-4 ${openSidebar ? "sidebar fixed top-0 left-0 h-full w-80 bg-secondary flex-col justify-start items-center p-5 transform translate-x-0 transition-all duration-300 z-50" : "hidden md:flex"}`}
+        className={`tabs-group flex items-center md:space-x-0 space-x-0 ${openSidebar ? "sidebar" : "hidden md:flex"}`}
       >
         {tabs.map((tab, index) => (
           <ScrollLink
@@ -33,8 +32,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             spy={true}
-            className="tab px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground cursor-pointer transition-all"
-            activeClass="bg-accent border border-border-primary"
+            className="tab px-4 py-2 rounded-md text-muted-foreground hover:text-primary cursor-pointer transition-all duration-200 ease-in-out"
+            activeClass="active-tab"
           >
             {tab.name}
           </ScrollLink>
@@ -45,30 +44,19 @@ const Navbar = () => {
       <SocialHandles className="hidden md:flex" />
 
       {/* Action Buttons */}
-      <div className="buttons flex items-center space-x-5">
-        <ScrollLink
-          to="services"
-          smooth={true}
-          className="services-btn hidden lg:inline-block px-4 py-2 btn btn-secondary"
-        >
-          Services
-        </ScrollLink>
+      <div className="google-dynamic-border-btn buttons flex items-center space-x-5">
         <ScrollLink
           to="contact"
           smooth={true}
-          className="btn primary contact-btn px-4 py-2 "
+          className="px-4 py-2 bg-white text-black rounded-lg hover:bg-grey-700 transition duration-300"
+          style={{borderRadius:"20px"}}
         >
           Contact Us
         </ScrollLink>
-        {/* Sidebar Toggle Button */}
-        <div
-          className="menu-btn md:hidden flex items-center cursor-pointer text-2xl"
-          onClick={() => setOpenSidebar(!openSidebar)}
-        >
-          <HiMenu />
-        </div>
+
       </div>
     </nav>
+    </div>
   );
 };
 

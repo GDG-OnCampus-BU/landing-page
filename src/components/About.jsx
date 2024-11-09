@@ -3,8 +3,6 @@ import '../styles/about.css';
 import { whyChooseUs } from '@/sources';
 import Image from 'next/image';
 
-// Uncomment and provide the correct path for the about image
-// import aboutImage from '../../assets/about-image.jpeg'; 
 
 const About = () => {
   return (
@@ -26,7 +24,7 @@ const About = () => {
             Aperiam voluptas at enim quisquam. Totam accusantium iusto temporibus 
             eius maiores rem ullam similique quae incidunt? Fugiat, repellat!
           </p>
-          <div className="group">
+          <div className="group bg-white">
             {whyChooseUs.map((list, index) => (
               <div className='flex-center group-item' key={index}>
                 <div className="flex-center icon-wrapper">
