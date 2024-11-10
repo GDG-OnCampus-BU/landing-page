@@ -34,6 +34,20 @@
       "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
       "color":"rgba(0, 0, 255, 1)",
       "bgcolor":"blue"
+    },
+    {
+      "image": "/assets/client-5.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 0, 255, 1)",
+      "bgcolor":"blue"
+    },
+    {
+      "image": "/assets/client-4.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 0, 255, 1)",
+      "bgcolor":"blue"
     }
   ],[
     {

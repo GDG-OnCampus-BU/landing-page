@@ -66,20 +66,13 @@ const TeamMemberCards = ({ teamMembers }) => {
             animate={{ opacity: 1, y: 0 }}
             className="mb-16 text-6xl font-bold tracking-tight text-center relative"
           >
-            <span className="inline-block">
-              <span className="text-[#4285F4]">T</span>
-              <span className="text-[#DB4437]">E</span>
-              <span className="text-[#F4B400]">A</span>
-              <span className="text-[#4285F4]">M</span>
-              <span className="mx-2"></span>
-              <span className="text-[#0F9D58]">M</span>
-              <span className="text-[#DB4437]">E</span>
-              <span className="text-[#4285F4]">M</span>
-              <span className="text-[#F4B400]">B</span>
-              <span className="text-[#DB4437]">E</span>
-              <span className="text-[#4285F4]">R</span>
-              <span className="text-[#0F9D58]">S</span>
-            </span>
+            <span style={{
+            background: 'linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent',
+            display: 'inline-block',
+          }}>TEAM MEMBERS</span>
             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#4285F4] via-[#DB4437] to-[#0F9D58]"></div>
           </motion.h1>
 
