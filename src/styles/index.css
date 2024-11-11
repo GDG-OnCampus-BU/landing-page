@@ -23,6 +23,9 @@
   --warning:#ffa500;
   --transition:all 400ms ease;
 }
+html {
+  scroll-behavior: smooth;
+}
 *{
   margin: 0;
   padding: 0;

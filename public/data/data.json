@@ -1,0 +1,175 @@
+[
+  [
+    
+    { "name": "Home", "id": "hero" },
+    { "name": "About Us", "id": "about" },
+    { "name": "Services", "id": "services" },
+    { "name": "Events", "id": "events" },
+    { "name": "Team", "id": "teammembercard" }
+  ],[
+    {
+      "image": "/assets/client-1.jpeg",
+      "name": "Kushagra Nigam",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea veniam, quis nostrud exercitation ullamco laborisveniam, quis nostrud exercitation ullamco laboris.",
+      "color":"rgba(255, 0, 0, 1)",
+      "bgcolor":"red"
+    },
+    {
+      "image": "/assets/client-2.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(255, 255, 0, 1)",
+      "bgcolor":"yellow"
+    },
+    {
+      "image": "/assets/client-3.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 128, 0, 1)",
+      "bgcolor":"green"
+    },
+    {
+      "image": "/assets/client-4.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 0, 255, 1)",
+      "bgcolor":"blue"
+    },
+    {
+      "image": "/assets/client-5.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 0, 255, 1)",
+      "bgcolor":"blue"
+    },
+    {
+      "image": "/assets/client-4.jpeg",
+      "name": "Kavya Mathur",
+      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.",
+      "color":"rgba(0, 0, 255, 1)",
+      "bgcolor":"blue"
+    }
+  ],[
+    {
+      "name": "Team Member 1",
+      "profile":"/assets/agent-1.jpeg",
+      "role": "Role 1",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(255, 50, 50, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #ff6b6b 0%, #ff8585 100%)"
+    },
+    {
+      "name": "Team Member 2",
+      "profile":"/assets/agent-2.jpeg",
+      "role": "Role 2",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(255, 195, 0, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #ffd700 0%, #ffeb3b 100%)"
+    },
+    {
+      "name": "Team Member 3",
+      "profile":"/assets/agent-3.jpeg",
+      "role": "Role 3",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(76, 175, 80, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #4caf50 0%, #8bc34a 100%)"
+    },
+    {
+      "name": "Team Member 4",
+      "profile":"/assets/agent-4.jpeg",
+      "role": "Role 4",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(33, 150, 243, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #2196f3 0%, #03a9f4 100%)"
+    },
+    {
+      "name": "Team Member 5",
+      "profile":"/assets/agent-5.jpeg",
+      "role": "Role 5",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(233, 30, 99, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #e91e63 0%, #ff4081 100%)"
+    },
+    {
+      "name": "Team Member 6",
+      "profile":"/assets/agent-6.jpeg",
+      "role": "Role 6",
+      "image": "landing-page/src/assets/agent-2.jpeg",
+      "shadowColor": "rgba(156, 39, 176, 0.8)",
+      "bgGradient": "linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%)"
+    }
+  ]
+  ,
+  [
+    {
+      "title": "Email",
+      "value": "gdg.community.dev",
+      "icon": "<MdOutlineAlternateEmail />"
+    },
+    {
+      "title": "Phone Number",
+      "value": "+91-9161055529",
+      "icon": "<IoCallOutline/>"
+    },
+    {
+      "title": "Address",
+      "value": "Bennett University, Greater Noida, India",
+      "icon": "<IoLocationOutline/>"
+    }
+  ],
+  [
+    {
+      "title": "Explore",
+      "routes": [
+        {"name": "Home", "id": "hero"},
+        {"name": "About Us", "id": "about"},
+        {"name": "Services", "id": "services"}
+      ]
+    },
+    {
+        "title":"Properties",
+        "routes":[
+          {"name":"Properties","id":"properties"},
+          {"name":"Agents","id":"agents"},
+          {"name":"Contact Us","id":"contact"}
+        ]
+      },
+    {
+        "title":"Quick Links",
+        "routes":[
+          {"name":"Privacy Policy"},
+          {"name":"Terms and Conditions"},
+          {"name":"Cookie Policy"}
+        ]
+      }
+  ],[
+    {
+      "subtitle": "GDSC / Info Session",
+      "title": "Event Name Here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula. In ornare ligula sit amet erat hendrerit, eu vehicula dolor lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula.",
+      "color": "#ADD8E6",
+      "shadowColor": "yellow-200"
+    },
+    {
+      "subtitle": "GDSC / Study Jams",
+      "title": "Event Name Here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula. In ornare ligula sit amet erat hendrerit, eu vehicula dolor lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula.",
+      "color": "#DDA0DD",
+      "shadowColor": "yellow-400"
+    },
+    {
+      "subtitle": "GDSC / Hackathon",
+      "title": "Event Name Here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula. In ornare ligula sit amet erat hendrerit, eu vehicula dolor lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula.",
+      "color": "#90EE90",
+      "shadowColor": "yellow-400"
+    },
+    {
+      "subtitle": "GDSC / Workshop",
+      "title": "Event Name Here",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula. In ornare ligula sit amet erat hendrerit, eu vehicula dolor lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tortor ligula.",
+      "color": "#FFB6C1",
+      "shadowColor": "yellow-400"
+    }
+  ]
+]

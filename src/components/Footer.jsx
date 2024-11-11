@@ -1,68 +1,81 @@
-// components/Footer.js
 import React from "react";
 import Image from "next/image";
-import { contactOptions, footer } from "../sources";
-import footerImage from "../assets/realist-footer.png"
+import footerImage from "../assets/realist-footer.png";
 import Logo from "./Logo";
 import SocialHandles from "../Commons/SocialHandles/index";
-import { Link as ScrollLink } from "react-scroll";
+import { Link } from 'react-scroll';
 
-const Footer = () => {
+const Footer = ({footer}) => {
   return (
-    <footer id="footer" className="py-10 text-gray-200 bg-gray-800">
-      <div className="px-4 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {contactOptions.map((option, index) => (
-            <div
-              key={index}
-              className="flex items-center p-4 space-x-3 bg-gray-700 rounded-lg"
-            >
-              <div className="flex items-center justify-center p-2 text-blue-500 bg-gray-800 rounded-full">
-                {option.icon}
-              </div>
-              <div>
-                <h4 className="text-sm text-gray-400">{option.title}</h4>
-                <h3 className="text-lg font-semibold">{option.value}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
+    <footer className="bg-gray-900 py-12 px-4 relative overflow-hidden">
+      {/* Google-inspired colored bar at the top */}
+      <div className="absolute top-0 left-0 right-0 h-1 flex">
+        <div className="flex-1 bg-blue-500"></div>
+        <div className="flex-1 bg-red-500"></div>
+        <div className="flex-1 bg-yellow-500"></div>
+        <div className="flex-1 bg-green-500"></div>
       </div>
 
-      <div className="pt-8 mt-10 border-t border-gray-700">
-        <div className="grid grid-cols-1 gap-8 px-4 mx-auto max-w-7xl md:grid-cols-3">
-          <div className="flex flex-col items-center md:items-start">
-            <Logo />
-            <div className="my-4">
-              <Image
-                src={footerImage}
-                alt="Footer Image"
-                width={200}
-                height={100}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Logo and Image Column */}
+          <div className="space-y-6">
+            <div className="transition-transform hover:scale-105">
+              <Logo />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+              <Image 
+                src={footerImage} 
+                alt="Footer Image" 
+                layout="responsive"
+                className="object-cover"
               />
             </div>
-            <SocialHandles />
+            <div className="py-4">
+              <SocialHandles />
+            </div>
           </div>
 
+          {/* Navigation Columns */}
           {footer.map((list, index) => (
-            <div key={index} className="text-center md:text-left">
-              <h3 className="mb-4 text-gray-400">{list.title}</h3>
-              {list.routes.map((route, i) => (
-                <ScrollLink
-                  to={route.id || ""}
-                  smooth={true}
-                  className="block text-gray-300 transition-colors cursor-pointer hover:text-blue-500"
-                  key={i}
-                >
-                  {route.name}
-                </ScrollLink>
-              ))}
+            <div key={index} className="space-y-4">
+              <h3 className="text-white text-lg font-semibold mb-4 relative">
+                {list.title}
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-blue-500"></span>
+              </h3>
+              <nav className="space-y-3">
+                {list.routes.map((route, i) => (
+                  <Link
+                    key={i}
+                    to={route.id || ''}
+                    smooth={true}
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 cursor-pointer text-sm"
+                  >
+                    {route.name}
+                  </Link>
+                ))}
+              </nav>
             </div>
           ))}
         </div>
-        <div className="mt-8 text-center text-gray-400">
-          <h4>Copyright &copy; All rights reserved - 2024</h4>
-          <p className="text-sm">Built with love by Devanshi Jaiswal</p>
+
+        {/* Copyright Section */}
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <h4 className="text-gray-400 text-sm">
+              Copyright &copy; All rights reserved - {new Date().getFullYear()}
+            </h4>
+            <p className="text-gray-500 text-sm flex items-center">
+              Built with 
+              <span className="inline-flex mx-1">
+                <span className="text-red-500">❤</span>
+              </span>
+              by 
+              <span className="ml-1 bg-gradient-to-r from-blue-500 via-red-500 to-yellow-500 bg-clip-text text-transparent font-medium">
+                GDG-Tech Team
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
